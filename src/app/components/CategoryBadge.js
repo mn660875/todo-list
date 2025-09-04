@@ -4,7 +4,8 @@ export default function CategoryBadge({ category }) {
       Personal: "bg-green-200 text-green-800",
       Shopping: "bg-yellow-200 text-yellow-800",
       Study: "bg-purple-200 text-purple-800",
-      Study: "bg-teal-200 text-teal-800",
+      Information: "bg-teal-200 text-teal-800",
+      
     };
   
     return (
