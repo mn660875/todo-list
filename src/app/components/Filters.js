@@ -7,7 +7,7 @@ export default function Filters({ onFilterChange, onCategoryChange }) {
   const [category, setCategory] = useState("All");
 
   const statuses = ["All", "Completed", "Pending"];
-  const categories = ["All", "Work", "Personal", "Shopping", "Study"];
+  const categories = ["All", "Work", "Personal", "Shopping", "Study", "Information"];
 
   return (
     <div className="flex flex-col sm:flex-row sm:items-center gap-3 my-4">
