@@ -10,7 +10,7 @@ export default function DeleteTask({ id, onDelete }) {
     if (!confirmDelete) return;
 
     try {
-      const res = await fetch(`${process.env.NEXT_PUBLIC_SITE_URL}/api/tasks/${id}`, {
+      const res = await fetch(`/api/tasks/${id}`, {
         method: "DELETE",
       });
       const data = await res.json();
