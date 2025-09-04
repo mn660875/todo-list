@@ -20,7 +20,7 @@ export default function Filters({ onFilterChange, onCategoryChange }) {
               setStatus(f);
               onFilterChange(f);
             }}
-            className={`px-3 py-1 rounded ${
+            className={`px-3 py-1 rounded cursor-pointer ${
               status === f ? "bg-blue-500 text-white" : "bg-gray-200"
             }`}
           >

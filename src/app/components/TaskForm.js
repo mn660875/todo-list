@@ -9,7 +9,12 @@ export default function TaskForm({ onTaskAdded }) {
   const router = useRouter();
 
   const addTask = async () => {
-    if (!title) return;
+   if(!title){
+    toast.error("Title is Empty")
+    return
+   }
+  
+
     const res = await fetch("/api/tasks", {
       method: "POST",
       headers: { "Content-Type": "application/json" }, // ✅ important
@@ -29,12 +34,13 @@ export default function TaskForm({ onTaskAdded }) {
     router.push("/dashboard");
   };
 
+
   return (
     <div className="w-full flex flex-col sm:flex-row gap-2">
       {/* Input */}
       <input
-        className="border p-2 rounded flex-1 w-full"
-        value={title}
+        className="border p-2 rounded flex-1 w-full outline-none "
+        value={title.charAt(0).toUpperCase() + title.slice(1)}
         onChange={(e) => setTitle(e.target.value)}
         placeholder="Enter task..."
       />
