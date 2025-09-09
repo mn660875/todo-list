@@ -1,4 +1,5 @@
 "use client";
+import { Trash2 } from "lucide-react";
 import { useRouter } from "next/navigation";
 import toast from "react-hot-toast";
 
@@ -30,8 +31,8 @@ export default function DeleteTask({ id, onDelete }) {
   };
 
   return (
-    <button onClick={deleteRecord} className="text-red-500 text-sm">
-      ❌
+    <button onClick={deleteRecord} className="text-red-500 text-sm cursor-pointer">
+      <Trash2/>
     </button>
   );
 }
