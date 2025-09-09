@@ -55,6 +55,7 @@ export default function TaskForm({ onTaskAdded }) {
         <option>Personal</option>
         <option>Shopping</option>
         <option>Study</option>
+        <option>Information</option>
       </select>
 
       {/* Button */}
