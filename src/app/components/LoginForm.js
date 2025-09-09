@@ -7,7 +7,7 @@ import { setCookie } from 'cookies-next';
 export default function LoginForm() {
   const router = useRouter();
   const STATIC_EMAIL = "admin@example.com";
-  const STATIC_PASSWORD = "123456";
+  const STATIC_PASSWORD = "12345678";
 
   const handleSubmit = (e) => {
     e.preventDefault();
