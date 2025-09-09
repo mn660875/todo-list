@@ -3,6 +3,7 @@ import { useState } from "react";
 import CategoryBadge from "./CategoryBadge";
 import DeleteTask from "@/lib/DeleteTask";
 import { Pencil, Check, X } from "lucide-react"; // icons for edit/save/cancel
+import toast from "react-hot-toast";
 
 export default function TaskItem({ task, onUpdate, onDelete }) {
   const [completed, setCompleted] = useState(task.completed);
@@ -20,6 +21,7 @@ export default function TaskItem({ task, onUpdate, onDelete }) {
       const updated = await res.json();
       setCompleted(updated.completed);
       onUpdate(updated);
+    toast.success("Todo Completed")
     } catch (err) {
       console.error("Error updating task:", err);
     }
@@ -36,6 +38,7 @@ export default function TaskItem({ task, onUpdate, onDelete }) {
       const updated = await res.json();
       setIsEditing(false);
       onUpdate(updated);
+      toast.success("Todo Updated")
     } catch (err) {
       console.error("Error updating task title:", err);
     }
