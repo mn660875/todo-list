@@ -6,7 +6,7 @@ const TaskSchema= new mongoose.Schema(
         category: {
             type:String,
             required: true,
-            enum: ["Work", "Personal", "Shopping", "Study"],
+            enum: ["Work", "Personal", "Shopping", "Study", "Information"],
             required: true
         },
         completed: {type: Boolean, default: false},
